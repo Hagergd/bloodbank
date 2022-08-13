@@ -25,6 +25,7 @@ class AdminController extends Controller
        $admin =  Auth::user()->name;
         $users = User::where('name',$admin)->get();
         $roles = Role::all();
+        // $roles = Role::all();
 
         return view('change password.index',compact('users','roles'));
     }
